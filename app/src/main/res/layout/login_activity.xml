@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/background_full">
+
+<RelativeLayout
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_centerInParent="true">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/user"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#FFF"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:id="@+id/accountImage"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME BACK,"
+        android:textColor="#fff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="22sp"
+        android:layout_below="@id/accountImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/nameLoginHeader"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOHN!"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/nameLoginHeader"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nameLogin"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="@drawable/login_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+        android:layout_centerHorizontal="true"
+        android:text="Log-in"
+        android:textColor="@color/white"
+        android:id="@+id/login"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Not you? Click to log-in as a different user"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginBottom="60dp"
+        android:id="@+id/different"
+        android:clickable="true"
+        android:gravity="center"/>
+
+
+</RelativeLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:background="@drawable/login_btn"
+        android:text="Log-in using Fingerprint"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:id="@+id/finger"
+
+        />
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="2"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAY SUMMARY"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageAndDescription">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFF"
+                android:src="@drawable/user"
+                android:scaleType="centerCrop"
+                android:id="@+id/propic"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/propic"
+                android:layout_marginLeft="140dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/Name"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="Line Manager: Adam SMith"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/Manager"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Region: Dhaka"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/Region"
+                    android:layout_above="@id/Manager"
+                    android:layout_marginBottom="1dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sales Representative"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_above="@id/Region"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/Designation"/>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageAndDescription"
+            android:id="@+id/dateInfo"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tuesday, November 22, 2017"
+                android:textColor="@color/dateTextColor"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/Date"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Date"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/dateTextColor"
+                android:text="7:45 PM"
+                android:id="@+id/Time"
+                android:gravity="center_horizontal"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day Logging Complete"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review your day"
+            android:textColor="@color/mainColor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/preHeader"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/preHeader"
+            android:layout_margin="10dp"
+            android:id="@+id/activityRecycler"
+            android:scrollbars="vertical"
+            android:layout_above="@id/viewLogs">
+
+        </android.support.v7.widget.RecyclerView>
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:background="@color/mainColor"
+            android:layout_below="@id/activityRecycler"
+            android:layout_alignParentRight="true"
+            android:id="@+id/horiLine"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/horiLine"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/totalTime"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

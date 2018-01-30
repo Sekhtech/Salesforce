@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Salesforce</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+    <string name="title_activity_home">Fingerprint</string>
+    <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
+    <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+    <string name="distance_matrix_api_key">AIzaSyCCFuaWpb8W5qCdpTwT7yMUoK_r6PN5_cM</string>
+
+
+    <!--Intent Data Pass Keys -->
+    <string name="LatitudeOfStartLocation">startLatitude</string>
+    <string name="LongitudeOfStartLocation">startLongitude</string>
+
+    <string name="sha_value_admin">Admin</string>
+    <string name="sha_value_sr">SR</string>
+    <!--FIREBASE STARTS-->
+    <!--NODE-->
+    <string name="firebase_managerCredential">ManagerCredential</string>
+    <string name="firebase_srCredential">SrCredential</string>
+    <string name="firebase_appointments">Appointments</string>
+    <string name="firebase_srProfile">SRProfile</string>
+    <string name="firebase_srWorktime">Worktime</string>
+    <string name="firebase_srDailyTask">DailyTask</string>
+    <string name="firebase_SrList">SRLists</string>
+    <string name="firebase_outletList">OutletList</string>
+    <string name="firebase_route">Route</string>
+    <!--QUERY NODE-->
+    <string name="firebase_query_id">id</string>
+    <!--FIREBASE ENDS-->
+
+    <!--Shared Preference Key -->
+    <string name="pref_name">Salesforce</string>
+    <string name="pref_sr_name">nameOfSr</string>
+    <string name="pref_password">password</string>
+    <string name="pref_loginTime">loginTime</string>
+    <string name="pref_loginDate">loginDate</string>
+    <string name="pref_loginDateWithDayName">loginDateWithDayName</string>
+    <string name="pref_taskStartTime">taskStartTime</string>
+    <string name="pref_taskEndTime">taskEndTime</string>
+    <string name="pref_taskName">taskName</string>
+    <string name="pref_sr_image">srImage</string>
+    <string name="pref_isLogged">isLoggedIn</string>
+    <string name="pref_isTaskRunning">isTaskRunning</string>
+    <string name="pref_whoIsTheUser">User</string>
+
+
+</resources>

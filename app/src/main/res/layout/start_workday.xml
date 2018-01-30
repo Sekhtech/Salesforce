@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIVITY LIST"
+            android:textColor="@color/white"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="7dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_keyboard_backspace_white_24dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:id="@+id/startToMain"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageAndDescription">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFF"
+                android:src="@drawable/user"
+                android:scaleType="centerCrop"
+                android:id="@+id/profileImageStart"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/profileImageStart"
+                android:layout_marginLeft="140dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/proNameStart"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="Line Manager: Adam SMith"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/proLineManagerStart"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Region: Dhaka"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/proRegionStart"
+                    android:layout_above="@id/proLineManagerStart"
+                    android:layout_marginBottom="1dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sales Representative"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_above="@id/proRegionStart"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/proDesignationStart"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imageAndDescription"
+            android:background="@drawable/background_quarter"
+            android:id="@+id/dateInfo"
+            android:layout_marginTop="15dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logging Tuesday, November 22, 2017"
+                    style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/StartDate"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/StartDate"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:text="Started from 7:45 PM"
+                    style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                    android:id="@+id/proTimeStart"
+                    android:gravity="center_horizontal"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3">
+        <include layout="@layout/container"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

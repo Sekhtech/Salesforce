@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#2663a6</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mainColor">#4C75A2</color>
+    <color name="btnColor">#238FCB</color>
+    <color name="white">#fff</color>
+    <color name="textColorWhite">#D3E4EB</color>
+    <color name="dateTextColor">#6ED9FB</color>
+    <color name="singleRecyclerText">#8A8A8A</color>
+
+    <color name="dubai_police">#c03a2e</color>
+    <color name="dubai_police_status">#a43227</color>
+    <color name="background_dubai_police">#D3D6DB</color>
+    <color name="callButton">#ffbf12</color>
+
+</resources>

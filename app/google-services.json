@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "168686099075",
+    "firebase_url": "https://salesforce-92594.firebaseio.com",
+    "project_id": "salesforce-92594",
+    "storage_bucket": "salesforce-92594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168686099075:android:e23e48da15c1c429",
+        "android_client_info": {
+          "package_name": "com.salesforce.nvisio.salesforce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "168686099075-44p54qmqpijknere7fd7v2mktso3bt7g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salesforce.nvisio.salesforce",
+            "certificate_hash": "4ec48fa4ea392bec0daae48a9fc83ab8166b4fce"
+          }
+        },
+        {
+          "client_id": "168686099075-losj3duqgo7cvd79f8g6atit0d78261f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlrxXQFw1dduf5WKMOPOAsy7reN5KC_jk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "168686099075-losj3duqgo7cvd79f8g6atit0d78261f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

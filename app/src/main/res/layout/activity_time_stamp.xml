@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:background="@drawable/background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIVITY DURATION"
+            android:textColor="@color/white"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="7dp"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_keyboard_backspace_white_24dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:id="@+id/activityToStart"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/imageAndDescriptionStamp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFF"
+                android:src="@drawable/user"
+                android:scaleType="centerCrop"
+                android:id="@+id/profileImageStamp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/profileImageStamp"
+                android:layout_marginLeft="140dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/proNameStamp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:text="Line Manager: Adam SMith"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/proLineManagerStamp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Region: Dhaka"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:id="@+id/proRegionStamp"
+                    android:layout_above="@id/proLineManagerStamp"
+                    android:layout_marginBottom="1dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Sales Representative"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:textColor="@color/textColorWhite"
+                    android:layout_above="@id/proRegionStamp"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/proDesignationStamp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imageAndDescriptionStamp"
+            android:background="@drawable/background_quarter"
+            android:id="@+id/dateInfoStamp"
+            android:layout_marginTop="40dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logging Tuesday, November 22, 2017"
+                    style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/StartDateStamp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/StartDateStamp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:text="Started from 7:45 PM"
+                    style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                    android:id="@+id/proTimeStamp"
+                    android:gravity="center_horizontal"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.3">
+
+        <TextView
+            android:id="@+id/activityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Complaint Managment"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/mainColor" />
+
+        <TextView
+            android:id="@+id/started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activityName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Started at"
+            android:textColor="#033266"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/startHM"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/started"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/startHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/clock"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/startHour"
+                    android:gravity="center"
+                    android:text="Hours"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/startMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/clock"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/startMin"
+                    android:gravity="center"
+                    android:text="Minutes"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startHM"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Finished at"
+            android:textColor="#033266"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/finishHM"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/finish"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/finishHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/clock"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/finishHour"
+                    android:gravity="center"
+                    android:text="Hours"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/finishMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/clock"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/finishMin"
+                    android:gravity="center"
+                    android:text="Minutes"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/started"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/startHM">
+
+            <TextView
+                android:id="@+id/am"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/clock"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_below="@id/finish"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/startHM">
+
+            <TextView
+                android:id="@+id/pm"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/clock"
+                android:gravity="center" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#68DDFF">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0d398b"
+            android:id="@+id/timeSpent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/login_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/startFinish"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/login_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/manual"
+            android:text="Manual Input"
+            android:textColor="@color/white"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

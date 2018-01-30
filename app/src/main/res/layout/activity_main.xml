@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.91"
+        android:background="@drawable/background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+
+            android:text="DAY SUMMARY"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/imageAndDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="2dp"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/profileImage"
+                android:layout_marginLeft="140dp">
+
+                <TextView
+                    android:id="@+id/proName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textColor="@color/textColorWhite" />
+
+                <TextView
+                    android:id="@+id/proLineManager"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:text="Line Manager: Adam SMith"
+                    android:textColor="@color/textColorWhite" />
+
+                <TextView
+                    android:id="@+id/proRegion"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/proLineManager"
+                    android:layout_marginBottom="1dp"
+                    android:text="Region: Dhaka"
+                    android:textColor="@color/textColorWhite" />
+
+                <TextView
+                    android:id="@+id/proDesignation"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/proRegion"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Sales Representative"
+                    android:textColor="@color/textColorWhite" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dateInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageAndDescription"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/proDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="Tuesday, November 22, 2017"
+                android:textColor="@color/dateTextColor"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/proTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/proDate"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="7:45 PM"
+                android:textColor="@color/dateTextColor"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateInfo"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true">
+            <Button
+                android:id="@+id/endWorkday"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:background="@drawable/login_btn"
+                android:layout_marginLeft="30dp"
+                android:text="End Workday"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:onClick="endWork"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/startActivity"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:background="@drawable/login_btn"
+                android:layout_marginRight="30dp"
+                android:text="Start Activity"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                android:onClick="startActiv"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/startWorkday"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_btn"
+            android:layout_below="@id/dateInfo"
+            android:text="Start Wokrday"
+            android:textSize="10sp"
+            android:layout_marginTop="10dp"
+            android:onClick="startWork"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="There is no data to show now"
+            android:textColor="#000"
+            android:gravity="center"
+            android:id="@+id/noData"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/mainColor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/preHeader"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Logs"
+            android:textColor="@color/mainColor"
+            android:clickable="true"
+            android:visibility="gone"
+            android:id="@+id/viewLogs"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logRecycler"
+            android:scrollbars="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+        </android.support.v7.widget.RecyclerView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Optimized Map"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:id="@+id/mapactivity"
+            android:background="@drawable/login_btn"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
